@@ -151,9 +151,7 @@ class SnifferAggregator(connections.Aggregator):
     @staticmethod
     def select_nodes(opts):
         """ Select all gateways that support sniffer """
-        nodes = common.get_nodes_selection(**vars(opts))
-        nodes_list = [n for n in nodes if n.startswith(('m3', 'a8'))]
-        return nodes_list
+        return common.get_nodes_selection(**vars(opts))
 
 
 def main(args=None):
